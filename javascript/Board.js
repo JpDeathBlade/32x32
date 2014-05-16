@@ -21,8 +21,7 @@ var Board = function() {
 		this.setHeight = function(_height) { height = _height; }
 		
 		this.Draw = function(_canvas) {
-			context = _canvas.getContext();
-			
+		
 			//Draw the board
 			temp = true;
 			for (var i = 0; i < boardWidth; i++)
@@ -30,12 +29,12 @@ var Board = function() {
 				for (var j = 0; j < boardHeight; j++)
 				{
 					if(temp == true) {
-						context.fillStyle = "#CECECE";
+						_canvas.fillStyle("#CECECE");
 					}
 					else {
-						context.fillStyle = "#AA9472";
+						_canvas.fillStyle("#AA9472");
 					}
-    				context.fillRect(j*4,i*4,4,4);
+    				_canvas.fillRect(j*4,i*4,4,4);
     				
     				temp = !temp;
     			}

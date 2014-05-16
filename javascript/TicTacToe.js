@@ -1,20 +1,16 @@
-var Chess = function()
+var TicTacToe = function()
 {
-	var Constructor = function Chess()
+	var Constructor = function TicTacToe()
 	{
 		var canvas;
-		var board;
 		
 		this.Initialize = function()
 		{
-			console.log("Chess: Initialize game...");
+			console.log("TicTacToe: Initialize game...");
 			
 			//Create the game canvas
-			canvas = new Canvas("idChess", 32, 32, 10, 30);
+			canvas = new Canvas("idTicTacToe", 3, 3, 100, 30);
 			canvas.appendCanvasTo("body");
-			
-			//Build the board
-			board = new Board();
 			
 			this.setInterval();
 		};
@@ -37,11 +33,14 @@ var Chess = function()
 		this.Draw = function()
 		{
 			console.log("Draw");
-    	
+
     		canvas.fillStyle("#FF0000");
-    		canvas.fillRect(10,10,1,1);
+    		canvas.fillRect(0,0,1,1);
+    		canvas.fillRect(1,1,1,1);
+    		canvas.fillRect(2,2,1,1);
     		
-    		board.Draw(canvas);
+    		canvas.fillStyle("#0000FF");
+    		canvas.fillRect(0,1,1,1);
     		
     		canvas.endRender();
 		};
@@ -50,7 +49,7 @@ var Chess = function()
 		
 		this.Log = function()
 		{
-			console.log("Chess");
+			console.log("TicTacToe");
 		};
 	};
 	
