@@ -39,6 +39,8 @@ var TicTacToe = function()
     		canvas.fillRect(1,1,1,1);
     		canvas.fillRect(2,2,1,1);
     		
+    		canvas.drawPixel(1, 0, "#00FF00");
+    		
     		canvas.fillStyle("#0000FF");
     		canvas.fillRect(0,1,1,1);
     		

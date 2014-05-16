@@ -58,6 +58,12 @@ var Canvas = function()
         {
         	context_FrontBuffer.fillRect(_x, _y, _w, _h);
         };
+        
+        this.drawPixel = function(_x, _y, _hexColor)
+        {
+        	context_FrontBuffer.fillStyle = _hexColor;
+        	context_FrontBuffer.fillRect(_x, _y, 1, 1);
+        };
 
 		this.getFPS		= function() { return fps; };
 		this.getWidth	= function() { return width; };
